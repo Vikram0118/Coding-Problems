@@ -74,7 +74,7 @@ class BinaryTreeMethods {
     }
 
     // get number of nodws in binary tree
-    public static int numberOfNodes(Node root){
+    public static int numberOfNodes(Node root) {
         int sum =0;
         if(root == null){
             return 0;
@@ -83,7 +83,7 @@ class BinaryTreeMethods {
         return sum + numberOfNodes(root.left) + numberOfNodes(root.right);
     }
 
-    public static int numberOfLeftNodes(Node root){
+    public static int numberOfLeftNodes(Node root ){
         int sum = 0 ;
         if(root == null){
             return 0;
