@@ -15,7 +15,7 @@ class Node {
 
 class BinaryTreeMethods {
 
-    public Node createNode (int data){
+    public Node createNode (int data) {
         Node a = new Node();
         a.data = data;
         a.left = null;
@@ -66,7 +66,7 @@ class BinaryTreeMethods {
     }
 
     // sum of nodes nane pattutu i started taking rest and after some 3 hrs did his. at that time i forgot even how i did sum of nodes :(
-    public static int differnceOfEvenAndOddLevels(Node root){
+    public static int differnceOfEvenAndOddLevels(Node root) {
         if(root == null){     
             return 0;
         }
@@ -83,7 +83,7 @@ class BinaryTreeMethods {
         return sum + numberOfNodes(root.left) + numberOfNodes(root.right);
     }
 
-    public static int numberOfLeftNodes(Node root ){
+    public static int numberOfLeftNodes(Node root ) {
         int sum = 0 ;
         if(root == null){
             return 0;
@@ -94,7 +94,7 @@ class BinaryTreeMethods {
         return sum + numberOfLeftNodes(root.left) + numberOfLeftNodes(root.right) ;
     }
 
-    public static int numberOfLeafNodes(Node root){
+    public static int numberOfLeafNodes(Node root) {
         // int sum = 0 ;   // zero space utilization 
         if(root == null){
             return 0;
@@ -118,7 +118,7 @@ class BinaryTreeMethods {
     }
 
     // print level wise elements 
-    public static void printLevelWiseElements(Node root, int level){
+    public static void printLevelWiseElements(Node root, int level) {
         if(root == null){
             return;
         }
@@ -143,7 +143,7 @@ class BinaryTreeMethods {
     }
 
     // reverse level order 
-    public static void printReverseLevelElements(Node root){
+    public static void printReverseLevelElements(Node root) {
         int height = heightOfTheNode(root);
 
         for(int i=height +1; i>0; i--){
@@ -167,6 +167,20 @@ class BinaryTreeMethods {
 
         printRightView(root.right, level +1);     // right view
         printRightView(root.left, level +1);
+    }
+
+    // mirror tre
+    public static void mirrorOfTree(Node root) {
+        if(root == null){
+            return ;
+        }
+        Node temp = new Node();
+
+        temp = root.right;
+        root.right = root.left;
+        root.left = temp;
+        mirrorOfTree(root.left);
+        mirrorOfTree(root.right);
     }
 }
 
@@ -208,7 +222,18 @@ public class BinaryTree {
         // BinaryTreeMethods.printLevelWiseElements(root, 3);
         // BinaryTreeMethods.printElementsInLevelOrder(root);
         // BinaryTreeMethods.printReverseLevelElements(root);
-        // BinaryTreeMethods.printLeftView(root);
-        BinaryTreeMethods.printRightView(root, 0);
+        // BinaryTreeMethods.printRightView(root, 0);   // see this carefully
+
+        // root = binary.createNode(3);
+        // root.left = binary.createNode(5);
+        // root.right = binary.createNode(6);
+        // root.right.left = binary.createNode(2);
+
+        System.out.println("BEFORE : ");
+        BinaryTreeMethods.inorderTraversal(root);
+        BinaryTreeMethods.mirrorOfTree(root);
+        System.out.println();
+        System.out.println("AFTER : ");
+        BinaryTreeMethods.inorderTraversal(root);
     }
 }
