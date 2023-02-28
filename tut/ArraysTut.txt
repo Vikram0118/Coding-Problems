@@ -1,0 +1,22 @@
+//---------------------------inserting element into ana array ( time : 9:40 ) ------------------------------
+        // before inserring anything it will print 0
+        // while "inserting at the end" there is no major problem, we just need to take care of the size of the array .
+        // while "inserting at the begining" we need to shift all the element next to it by one position .
+        // a[0] = 12; // a[1] = 34; // a[2] = 15; // inserting at the end
+
+
+        // for(int j=0; j<a.length; j++) { // using method
+        //     o.insertAtEnd(a, j+1);
+        // }
+        // o.insertAtStart(a, 40);
+        // o.insertAtPosition(a, 50, 2);
+        // o.printArray(a);
+
+        // ------------------deleteing the element for an array-------------------- // "printing need to be taken care" - do printing using a separate variable
+        // IN DELETIN WE DON'T ACTUALLY USE THE LENGTH OF THE ARRAY, WE USE THE SPECIAL VARIABLE TO MAINTAIN THE LENGTH - THAT HOLDS THE LENGTH
+        // deleting at the end is easy - we just have to print the elemnt upto one position before
+        // deleting at the starting is to be carefull
+        // o.deleteAtValue(a, 500);
+        // o.deleteAtPosition(a, 1);
+        o.printArray(a);
+        System.out.println();
