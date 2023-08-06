@@ -43,12 +43,12 @@ public class ArraysTut {
         //  by iterating again we will just replace the values with zeroes ines and twos
         // int[] a = {0, 1, 1, 0, 2, 2, 1, 0, 2};
         // now here we are actually doing it in linear time only one iteration
-        // o.dutchNationalFlag(a, a.length);
+        o.dutchNationalFlag(a, a.length);
         // o.printArray(a);
 
         //---------------equilibrium point----------------
-        // int[] a = {1, 6, 7, 0,7};
-        // o.equilibriumPoint(a);
+        int[] a = {1, 6, 7, 0,7};
+        o.equilibriumPoint(a);
 
         //-----------------print element greater than are equal to its right side---------------
         // int[] a = {14, 15, 8, 9, 5, 2};
@@ -234,37 +234,37 @@ public class ArraysTut {
 
         //---------------max mul of any two number--------------
         // int[] arr = {4, 1, 3};                
-        int[] arr = {-4, 7, -1,-99, 18, 2, 5};
+        // int[] arr = {-4, 7, -1,-99, 18, 2, 5};
 
-        int min=0, sMin=0, max=0, sMax=0;
+        // int min=0, sMin=0, max=0, sMax=0;
 
-        if(arr.length > 3){           // this hold good for all cases and time completixity is o(n)
-            if(arr[0] < arr[1]){
-                min = arr[0];
-                sMin = arr[1];
-                max= arr[1];
-                sMax = arr[0];
-            }
-            for(int i=2; i<arr.length; i++){
-                if(arr[i] < min){
-                    sMin = min;
-                    min = arr[i];
-                } else if(arr[i] > min && arr[i] < sMin){
-                    sMin = arr[i];
-                }
-                if(arr[i] > max ){
-                    sMax = max;
-                    max = arr[i];
-                }  else if(arr[i] > sMax && arr[i] < max){
-                    sMax = arr[i];
-                }
-            }
-        }
-        if(sMax*max > sMin*min){
-            System.out.println("("+sMax+","+max+")= "+((sMax*max)));
-        } else {
-            System.out.println("("+sMin+","+min+")= "+((sMin*min)));
-        }
+        // if(arr.length > 3){           // this hold good for all cases and time completixity is o(n)
+        //     if(arr[0] < arr[1]){
+        //         min = arr[0];
+        //         sMin = arr[1];
+        //         max= arr[1];
+        //         sMax = arr[0];
+        //     }
+        //     for(int i=2; i<arr.length; i++){
+        //         if(arr[i] < min){
+        //             sMin = min;
+        //             min = arr[i];
+        //         } else if(arr[i] > min && arr[i] < sMin){
+        //             sMin = arr[i];
+        //         }
+        //         if(arr[i] > max ){
+        //             sMax = max;
+        //             max = arr[i];
+        //         }  else if(arr[i] > sMax && arr[i] < max){
+        //             sMax = arr[i];
+        //         }
+        //     }
+        // }
+        // if(sMax*max > sMin*min){
+        //     System.out.println("("+sMax+","+max+")= "+((sMax*max)));
+        // } else {
+        //     System.out.println("("+sMin+","+min+")= "+((sMin*min)));
+        // }
         
         // for(int i=0; i<arr.length; i++){     // this doesn't hild good for this case int[] arr = {4, 1, 3};   
         //     if(arr[i] > b){
@@ -274,6 +274,27 @@ public class ArraysTut {
         // }
         // int key = a*b;
         // System.out.println("("+a+","+b+")= "+key);
+
+        // ---------segregate 0 and 1----------------
+        // int[] a = {0, 1, 1, 0, 0, 0, 1, 1, 0, 1};
+        // int i=0, j=0;
+
+        // while(i<a.length) {
+        //     if(a[i] == 0){
+        //         a[i] = a[j];
+        //         a[j] = 0;    
+        //         i++;
+        //         j++;
+        //     } else {
+        //         i++;
+        //     }
+        // }
+        // for(int k =0; k<a.length; k++){
+        //     System.out.print(a[k]+" ");
+        // }
+
+        
+
     }
 
     public int firstReapeatingElement(int[] a){
@@ -353,7 +374,7 @@ public class ArraysTut {
             if(sum == currentSum){
                 System.out.println("THE EQUILIBRIUM POINT IS : "+ (i+1)+" AND THE VALUE AT THAT POINT IS : "+a[i]);
                 return;
-            }
+            }              
             currentSum += a[i];
         }
     } 
@@ -397,7 +418,7 @@ public class ArraysTut {
         // to handle both negative and positive value we use this algorithm   // it is actually "GOOD"
         int ans = Integer.MIN_VALUE;
         int current=0;
-        int start =0, end =0, s=0;
+        int start =0, end =0;
 
         // for(int i=0; i<a.length; i++){
         //     current = Math.max(current+a[i], a[i]);

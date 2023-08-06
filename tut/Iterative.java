@@ -1,5 +1,4 @@
 
-
 class Node {
     int data;
     Node next;
@@ -51,7 +50,7 @@ class Linked {
             return a;
         } else {
             a.next = node;
-            node = a;
+            // node = a;
         }
         return node;
     }
@@ -429,7 +428,6 @@ class Linked {
 
 public class Iterative {
     public static void main(String[] args) {
-
 
         Node root1 = null;
         // Node root2 = null;
