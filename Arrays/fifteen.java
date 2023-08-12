@@ -2,7 +2,7 @@ public class fifteen {
     public static void main(String[] args) {
         // video number 40
 
-        // find the subarray length such that if we sort then the whole array will be sorted
+        // find the subarray length such that if we sort it,  then the whole array will be sorted
 
         int[] arr = {1, 2, 5, 3, 19, 12, 8, 15, 18};  // test case
         // {1,2,5,3,0,12,13,8,15,18}  // test case

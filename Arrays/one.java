@@ -4,7 +4,8 @@ public class one {
         // Get the largest contiguous sum of sub-array
         int[] arr = {-3, -4, 4, -1, -2, 1, 5, -3};
 
-        System.out.println("The Largest possible sum = "+SingleLoop(arr));
+        // System.out.println("The Largest possible sum = "+SingleLoop(arr));
+        System.out.println(TwoLoops(arr));
     }
 
     public static int ThreeLoops(int[] arr){
@@ -34,9 +35,10 @@ public class one {
             int temp = 0;
             for(int j=i; j<arr.length; j++) {    
                 temp += arr[j];
-                if(temp > sum){
+                if(temp > sum){    // why its inside for loop of j ?? -> purinjiduchii
+                    System.out.println(temp);
                     sum = temp;
-            }
+                }
             }
         }
         return sum;

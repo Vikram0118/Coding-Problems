@@ -2,8 +2,8 @@ import java.util.*;
 
 public class ten {
     public static void main(String[] args) {
-        // compare two strings with backspace character
-        String s1 = "bcd##c";
+        // compare two strings with backspace character - backspace character deletes one character before it . 
+        String s1 = "bcd##c";     //if beigning and ending have # , we have to trim it before giving it to stack, because stack will throw an error 
         String s2 = "bd#c";
 
         System.out.println(MySolution(s1, s2));

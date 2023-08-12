@@ -4,7 +4,7 @@ public class four {
     public static void main(String[] args) {
         // reverse a String
 
-        String s = "Vikuram";
+        String s = "Vikuram is a bitch";
         // System.out.println(UsingCharArray(s));
         // System.out.println(MySolution(s));
         // System.out.println(Optimal(s));
@@ -35,7 +35,7 @@ public class four {
         int start=0, end =s.length()-1;
 
         while(start < end) {
-            s = swap(s.toCharArray(), start, end);
+            s = swap(s.toCharArray(), start, end);   // remeber : every time we swap we send the new updated char array
             start ++;
             end --;
         }
@@ -47,7 +47,7 @@ public class four {
     public static String MySolution(String s) {
         int end =s.length()-1;
         String ans = "";
-
+        
         while(end >= 0) {
             char c = s.charAt(end);
             // System.out.println(c);
@@ -60,7 +60,7 @@ public class four {
 
     public static String UsingCharArray(String s) {
         int end  = s.length() - 1; // IMPORTANT
-        int i=0;
+        int i=0;   // to maintain index
         char[] arr = new char[s.length()];
 
         while(end>=0) {

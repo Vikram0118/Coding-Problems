@@ -2,8 +2,8 @@ public class two {
     public static void main(String[] args) {
         // Equilibrium point in an Array
 
-        // int[] arr = { 1, 6, 7, 0, 7};
-        int[] arr = { 5, 5, -10, 6, 0};
+        int[] arr = { 1, 6, 7, 0, 7};
+        // int[] arr = { 5, 5, -10, 6, 0};
 
         int sum=0, ref=0;
 

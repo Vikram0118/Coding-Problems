@@ -20,5 +20,11 @@ public class one {
                 System.out.print(arr[i]+" ");
             }
         }
+
+        for(int i=0; i<s.length(); i++) {
+            if(s.charAt(i) !=' ' && (i == 0 || s.charAt(i-1) == ' ')){
+                System.out.print(arr[i]+" ");
+            }
+        }
     }
 }

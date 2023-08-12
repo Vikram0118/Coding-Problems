@@ -7,8 +7,9 @@ public class twevel {
     public static void main(String[] args) {
         // check if the multiple of any two number matches to the given value
 
-        int[] arr = {4, 1, 3, 10, 7, 8};
-        int key = 12;
+        // int[] arr = {4, 1, 3, 10, 7, 8};
+        int[] arr = {-5, -3, 1, 4, 7, 8 };
+        int key = 15;
 
         // // brute force
         // for(int i=0; i<arr.length; i++) {
@@ -55,7 +56,7 @@ public class twevel {
             if(H.contains(ref)) {
                 System.out.println(arr[i]+" x "+ref+" = "+key); // problrm eruku (solved)
             } 
-            H.add(arr[i]);    
+            H.add(arr[i]);    // important
         }
 
     }

@@ -4,6 +4,27 @@ public class five {
 
         int[] arr = {14, 15, 8, 9, 5, 2};
 
+        int max = Integer.MIN_VALUE;
+        for(int i= arr.length -1; i>=0; i--) {
+            if(arr[i] > max) {
+                System.out.println(arr[i]);
+            }
+            max = Math.max(max, arr[i]);
+            
+        }
+
+        // just as same as the above one
+        
+        // int max = Integer.MIN_VALUE;
+        // for(int j =arr.length -1 ; j>=0; j--) {
+        //     if(arr[j] > max) {
+        //         max = arr[j];
+        //         System.out.print(arr[j]+" ");
+        //     }
+        // }
+
+        // -----------------------------------------------------------------------------------------
+
         // int ref1=0, ref2, ref3=Integer.MIN_VALUE, i=arr.length -1;
         // int ref2 = Integer.MAX_VALUE, ref1=Integer.MIN_VALUE, i=arr.length -1;
 
@@ -20,12 +41,6 @@ public class five {
 
         // ------------------------------------------------------------------------
 
-        int max = Integer.MIN_VALUE;
-        for(int j =arr.length -1 ; j>=0; j--) {
-            if(arr[j] > max) {
-                max = arr[j];
-                System.out.print(arr[j]+" ");
-            }
-        }
+        
     }
 }

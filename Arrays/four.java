@@ -3,10 +3,11 @@ public class four extends Sorting {
         // find the misssing number in the range of 1 to n in an unsorted array
         int[] arr = {1, 4, 5, 6, 3, 8, 7};
 
-        System.err.println("The Missing number is :" +UsingCyclicSort(arr));
+        // System.err.println("The Missing number is :" +UsingCyclicSort(arr));
+        System.out.println(SimpleMethd(arr));
     }
 
-    public static int SimpleMethd(int[] arr) {
+    public static int SimpleMethd(int[] arr) {   // only  works if the number added instead of the missin  number is just onw above the maximum number 
         int sum = 0, ans = (arr.length + 1) * (arr.length + 2) / 2; // Important : Length + 1
         for(int i=0; i<arr.length; i++) {
             sum += arr[i];

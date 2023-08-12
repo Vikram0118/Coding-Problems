@@ -30,9 +30,9 @@ class four {
         int maxi = 0;
         int sum = 0; 
 
-        for(int i = 0;i<arr.length;i++) {
+        for(int i = 0;i<n;i++) {
 
-            sum += arr[i]; 
+            sum += A[i]; 
 
             if(sum == 0) {
                 maxi = i + 1; 

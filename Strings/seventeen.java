@@ -4,17 +4,17 @@ public class seventeen {
     // get the frequency of every word in a String
 
     public static void main(String[] args) {
-        String s = "Best items in category are Samsung, Lenovo. Samsung items are cool : lenovo are cool";
+        String s = "Best items in category are Samsung, Lenovo. Samsung items are cool and best : lenovo are cool";
         Map<String , Integer> M  = mostFrequent(s);
 
         System.out.println(M);
     }
 
     public static Map<String, Integer> mostFrequent(String s) {
-        s = s.replaceAll("[^a-zA-Z0-9]", " ");
+        s = s.replaceAll("[^a-zA-Z0-9]", " ");  // we are not changing the case 
         String[] allWords = s.split(" +");
 
-        System.out.println(allWords);
+        // System.out.println(allWords);
 
         Map<String , Integer> M = new HashMap<>();
 
@@ -28,10 +28,10 @@ public class seventeen {
             int freq1 = M.get(e1);
             int freq2 = M.get(e2);
 
-            // if(freq1 != freq2) {
-            //     return freq2 - freq1;    // decreasing order
-            //     // return freq1 - freq2;   // increasing order
-            // }
+            if(freq1 != freq2) {
+                // return freq2 - freq1;    // decreasing order
+                return freq1 - freq2;   // increasing order
+            }
 
             return e1.compareTo(e2); // alphabetical
             // return e2.compareTo(e1); // reverse alphabetical

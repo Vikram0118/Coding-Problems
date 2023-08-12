@@ -19,18 +19,18 @@ public class eleven {
         // System.out.println(H);
 
         // // 2 - 
-        // List<Integer> L = new ArrayList<>();
+        // Set<Integer> L = new HashSet<>();  // list taks duplicates, set doesn't take duplicates
 
         // int i=0, j =0;
 
         // while(i<arr1.length && j<arr2.length) {
 
-        //     while(i<arr1.length-1 && arr1[i] == arr1[i+1]){
-        //         i++;
-        //     }
-        //     while(j<arr2.length-1 && arr2[j] == arr2[j+1]){
-        //         j++;
-        //     }
+        //     // while(i<arr1.length-1 && arr1[i] == arr1[i+1]){
+        //     //     i++;
+        //     // }
+        //     // while(j<arr2.length-1 && arr2[j] == arr2[j+1]){
+        //     //     j++;
+        //     // }
             
         //     if(arr1[i] == arr2[j]) {
         //         L.add(arr1[i]);
@@ -49,10 +49,11 @@ public class eleven {
         //     }
         // }
 
+        // // to add the remaining elemngt in the list 
         // while(i<arr1.length) {
-        //     while(i<arr1.length-1 && arr1[i] == arr1[i+1]){
-        //         i++;
-        //     }
+        //     // while(i<arr1.length-1 && arr1[i] == arr1[i+1]) {
+        //     //     i++;
+        //     // }
         //     L.add(arr1[i]);
         //     i++;
         // }
@@ -73,7 +74,8 @@ public class eleven {
         int[] arr1 = {4, 2, 3, 5, 4, 2, 3};
         int[] arr2 = {9, 1, 7, 2, 4, 2, 1, 2};
 
-        // 1 - use Hash set - just store everything in both the arryas //  PROBLEM IS = " THE HASH SET AUTOMATICALLY SORTS THE VALUE INSODE IT"
+
+        // // 1 - use Hash set - just store everything in both the arryas //  PROBLEM IS = " THE HASH SET AUTOMATICALLY SORTS THE VALUE INSODE IT"
         Set<Integer> H = new HashSet<>();
         
         for(int i=0; i<arr1.length; i++){
@@ -83,10 +85,6 @@ public class eleven {
             H.add(arr2[i]);
         }
         System.out.println(H);
-
-
-        //2 
-
 
     }
 }

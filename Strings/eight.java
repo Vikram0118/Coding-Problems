@@ -19,7 +19,8 @@ public class eight {
             char c = s.charAt(end);
             M.put(c, M.getOrDefault(c, 0) + 1);
 
-            while(M.size() > k) {
+            // if(M.size() > k)
+            while(M.size() > k) {      // always keep tracking if the window has k distinct characters
                 char c1 = s.charAt(start);
                 M.put(c1, M.get(c1) - 1);
 

@@ -12,13 +12,13 @@ class LeetCode {
         int i = s.length() -1;
 
         // for triming
-        while(i>=0 && s.charAt(i) == ' ')
+        while(i>=0 && s.charAt(i) == ' ') 
             i--;
 
         // traversing the last word
         int lastPos = i;
 
-        while(i>=0 && s.charAt(i) != ' ') {
+        while(i>=0 && s.charAt(i) != ' ') { // traversing the last word
             i--;
         }
 

@@ -1,7 +1,7 @@
 public class two {
     public static void main(String[] args) {
         // Trim the string without using trim function
-        String s = "       H                     ";
+        String s = " Hello ";
         System.out.println(s.trim());
         char[] arr = s.toCharArray();
 
@@ -12,6 +12,6 @@ public class two {
             if(arr[end] == ' ') end--;
         }
 
-        System.out.println(new String(arr, start, (end - start + 1)));  // important
+        System.out.println(new String(arr, start, (end - start + 1)));  // important // important 
     }
 }
