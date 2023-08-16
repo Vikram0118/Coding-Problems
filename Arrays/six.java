@@ -6,7 +6,7 @@ public class six {
     public static void main(String[] args) {
         // check if there exist a pair which matches the given sum
 
-        int[ ] arr = {12, 3, 5, 1, 9};
+        // int[ ] arr = {12, 3, 5, 1, 9};
         // SimpleMethod1(arr, 10);
         // SimpleMethod2(arr, 10);
         // UsingHashList(arr, 10);
