@@ -1,3 +1,12 @@
+class Node {
+    // Node(int val) {
+    //     this.i = val;
+    //     this.next = null;
+    // }
+    int i;
+    Node next;
+}
+
 public class Utils {
     public static void main(String[] args) {
         LinkedList L = new LinkedList();
@@ -10,23 +19,67 @@ public class Utils {
         root = L.Insert(6, root);
         root = L.Insert(7, root);
 
-        L.PrintLinkedList(root);
+        // L.PrintLinkedList(root); // recursive
 
-        // root = L.RotateAntiKNodes(root, 2);
-        root = L.Reverse(root);
+        // root = L.InsertAtFront(root, 7);
+        // root = L.InsertAtPosition(root, 99, 0); // recursion
+        root = L.deleteLastNode(root);
+        L.PrintLinkedList(root);
         System.out.println();
 
-        L.PrintLinkedList(root);
 
+
+
+        // root = L.RotateAntiKNodes(root, 2);
+        // root = L.Reverse(root);
+        // System.out.println();
+
+        // L.PrintLinkedList(root);
     }
 }
 
-class Node {
-    int i;
-    Node next;
-}
-
 class LinkedList {
+
+    public Node deleteLastNode(Node node) {
+        if(node.next == null) {
+            return null;
+        }
+
+        Node temp = node;
+        while(temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+        return node;
+    }
+
+    public Node InsertAtPosition(Node root, int val, int position) {
+        Node head = root;
+
+        if(position == 1) {
+            Node temp = new Node();
+            temp.i = val;
+            temp.next = root.next;
+            root.next = temp;
+            return head;
+        }
+
+        InsertAtPosition(root.next, val, position - 1);
+
+        return head;
+    }
+
+    public Node InsertAtFront(Node root, int val) {
+        if(root == null) {
+            return NewNode(val); 
+        }
+        Node temp = new Node();
+        temp.i = val;
+
+        temp.next = root;
+        return temp;
+    }
+
     public Node Insert(int val, Node node) {
         if(node == null){
             return NewNode(val);
@@ -93,9 +146,6 @@ class LinkedList {
             current = next;
         }
 
-        return pre;
-
-        // 1, 2, 3
-        // 
+        return pre; 
     }
 }
