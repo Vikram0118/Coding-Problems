@@ -1,0 +1,6 @@
+Tabulation - Bottom up
+Memoization - top down - storing the value of subproblem in map or table
+
+how to tell the problem is DP :
+1. count the total number of ways 
+2. if there are multiple way to doa a thing and we have to return the maximum or minimum 

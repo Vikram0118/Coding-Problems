@@ -2,6 +2,7 @@
 public class nineteen {
     public static void main(String[] args) {
 
+
         String s = "aabzzzz";
         int[] charCount = new int[26];
         
