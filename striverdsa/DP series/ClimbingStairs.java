@@ -4,11 +4,11 @@ public class ClimbingStairs {
     public static void main(String[] args) {
         int n = 3;
 
-        // System.out.println(MySolution(0, n));
+        System.out.println(MySolution(0, n));
         // System.out.println(MySolutionUsingDP(n, n, 0));
         int[] DP = new int[n+1];
         Arrays.fill(DP, -1);
-        System.out.println(MySolutionUsingDPMem(n, n, DP));
+        // System.out.println(MySolutionUsingDPMem(n, n, DP));
     }
 
     public static int MySolutionUsingDPMem(int position, int n,int[] DP) {

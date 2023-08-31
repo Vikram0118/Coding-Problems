@@ -35,8 +35,8 @@ public class one {
             int temp = 0;
             for(int j=i; j<arr.length; j++) {    
                 temp += arr[j];
-                if(temp > sum){    // why its inside for loop of j ?? -> purinjiduchii
-                    System.out.println(temp);
+                if(temp > sum) {    // why its inside for loop of j ?? -> purinjiduchii
+                    // System.out.println(temp);
                     sum = temp;
                 }
             }

@@ -26,7 +26,7 @@ public class nineteen {
             }
         }
         
-        // System.out.println(total+" "+max);
+        // System.out.println(total+" "+max+" "+maxC);
         if (total-max < max-1) {
             System.out.println("Nope");
             return;

@@ -20,7 +20,7 @@ public class nine {
             char c = s.charAt(end);
 
             if(M.containsKey(c)) {
-                start = Math.max(start, M.get(c) + 1);  // important
+                start = Math.max(start, M.get(c) + 1);  // important // important
             }
 
             M.put(c, end);   // i m adding the position of the character

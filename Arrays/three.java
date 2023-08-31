@@ -11,7 +11,6 @@ public class three extends Utils {
         while( mid < end ) {
             switch(arr[mid]) {
                 case 0 :
-                    // if(arr[start] > arr[mid])
                     if(arr[start] > arr[mid])
                         swap(arr, start, mid);
                     start ++;

@@ -10,7 +10,6 @@ public class five {
                 System.out.println(arr[i]);
             }
             max = Math.max(max, arr[i]);
-            
         }
 
         // just as same as the above one

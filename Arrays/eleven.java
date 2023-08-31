@@ -75,7 +75,7 @@ public class eleven {
         int[] arr2 = {9, 1, 7, 2, 4, 2, 1, 2};
 
 
-        // // 1 - use Hash set - just store everything in both the arryas //  PROBLEM IS = " THE HASH SET AUTOMATICALLY SORTS THE VALUE INSODE IT"
+        // // 1 - use Hash set - just store everything in both the arryas //  PROBLEM IS = " THE HASH SET AUTOMATICALLY SORTS THE VALUE INSIDE IT"
         Set<Integer> H = new HashSet<>();
         
         for(int i=0; i<arr1.length; i++){

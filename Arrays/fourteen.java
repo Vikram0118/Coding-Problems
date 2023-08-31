@@ -43,7 +43,7 @@ public class fourteen {
             i = start;
             if(arr[end] == 0){
                 no_fo_zero += 1;
-                System.out.println(no_fo_zero);
+                // System.out.println(no_fo_zero);
             }
 
             while(no_fo_zero > k) {

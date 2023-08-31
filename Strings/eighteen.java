@@ -2,16 +2,16 @@
 
 class eighteen {
     public static void main(String[] args) {
-        System.out.println(MySolution("abab"));
-        System.out.println(LeetCodeBest("abab"));
-        System.out.println(CleverSolution("abab"));
+        // System.out.println(MySolution("abab"));
+        System.out.println(LeetCodeBest("ababab"));
+        // System.out.println(CleverSolution("abab"));
     }
 
     public static boolean LeetCodeBest(String s) {
         int len = s.length();
     
         for(int i = len / 2; i > 0; i--){
-            if(len % i == 0 && s.charAt(i - 1) == s.charAt(len - 1)){
+            if(len % i == 0 && s.charAt(i-1) == s.charAt(len-1)){
                 String ss = s.substring(0, i);
                 int repeat = len / i;
                 if(ss.repeat(repeat).equals(s)){

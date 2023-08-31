@@ -25,6 +25,7 @@ public class three {
             if(str[i].equals(s1)) {
                 str[i] = s2;
             }
+            // System.out.println(str[i]);
         }
 
         return new String(String.join(" ", str));      // joins a values of String array to a single string
